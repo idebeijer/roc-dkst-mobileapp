@@ -1,23 +1,20 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import tw from "twrnc";
+import { Button, Text, View } from "react-native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import StackNavigator from "./StackNavigator";
+import { AuthProvider } from "./src/hooks/useAuth";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+export default function App({ navigation }): JSX.Element {
+  // const navigation = useNavigation();
+
   return (
-    <View style={styles.container}>
-      <Text style={tw`text-red-600`}>
-        Open up App.js to start working on your app!
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AuthProvider>
+        <StackNavigator />
+      </AuthProvider>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
