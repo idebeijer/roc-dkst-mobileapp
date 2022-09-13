@@ -13,6 +13,7 @@
     "@react-navigation/native-stack": "^6.8.0",
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
+    "daisyui": "^2.27.0",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
     "nativewind": "^2.0.9",
