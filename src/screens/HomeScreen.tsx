@@ -15,14 +15,8 @@ const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
       <View>
-        <Text className="text-red-800">HomeScreen</Text>
         <Button title="Qr" onPress={() => navigation.navigate("QrScreen")} />
-        <View className="w-full mx-auto px-6">
-          <TextInput placeholder="Email" />
-          <View className="p-2 rounded-lg">
-            <Text className="text-center text-primary">Login</Text>
-          </View>
-        </View>
+        <View className="w-full mx-auto px-6"></View>
       </View>
     </SafeAreaView>
   );
