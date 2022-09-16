@@ -1,8 +1,6 @@
 import { View, Text, Button } from "react-native";
 import React from "react";
-// import QRCode from "qrcode";
 import QRCode from "react-native-qrcode-svg";
-// import QRCode from "react-qr-code";
 
 const getUnixTimestamp = () => {
   return Math.round(new Date().getTime() / 1000).toString();

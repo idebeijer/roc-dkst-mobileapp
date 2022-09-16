@@ -5,6 +5,7 @@ import HomeScreen from "./src/screens/HomeScreen";
 import QrScreen from "./src/screens/QrScreen";
 import LoginScreen from "./src/screens/LoginScreen";
 import useAuth from "./src/hooks/useAuth";
+import ProfileScreen from "./src/screens/ProfileScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ const StackNavigator = () => {
         <>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="QrScreen" component={QrScreen} />
+          <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         </>
       ) : (
         <>
