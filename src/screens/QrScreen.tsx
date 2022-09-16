@@ -4,6 +4,10 @@ import React from "react";
 import QRCode from "react-native-qrcode-svg";
 // import QRCode from "react-qr-code";
 
+const getUnixTimestamp = () => {
+  return Math.round(new Date().getTime() / 1000).toString();
+};
+
 const QrScreen = ({ navigation }) => {
   const [width, setWidth] = React.useState(0);
   const onLayout = (event) => {
@@ -12,6 +16,11 @@ const QrScreen = ({ navigation }) => {
   };
 
   const x = true;
+
+  const data = {
+    userId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    time: getUnixTimestamp(),
+  };
 
   return (
     <View>
@@ -22,7 +31,11 @@ const QrScreen = ({ navigation }) => {
         className="flex items-center justify-center mt-[20px]"
       >
         {x ? (
-          <QRCode size={width - 40} ecl="H" value="www.debeijer.io" />
+          <QRCode
+            size={width - 40}
+            ecl="H"
+            value="3fa85f64-5717-4562-b3fc-2c963f66afa6"
+          />
         ) : (
           <Text>Loading...</Text>
         )}
